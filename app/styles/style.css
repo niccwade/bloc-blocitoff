@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+        width: 100%;
+    font-size: 100%;
+    font-family: helvetica;
+    font-weight: 200;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+}
+
+.taskBoxContainer {
+    background-color: aqua;
+    width: 90%;
+    height:90%;
+    margin: auto;
+        margin-top: 3%;
+
+}
+
+.taskHeader {
+    height:10%;
+    width: 100%;
+    background-color:lightgrey;
+}
+
+.taskHeaderText{
+    font-size: 120%;
+    width:20%;
+    height: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.taskContainer{
+    height: 10%;
+    width: 100%;
+    background-color: azure;
+    border-bottom: thin solid lightgrey;
+}
+
+.taskText{
+    height: 50%;
+    background-color: inherit;
+    margin-left: 2%;
+margin-bottom: auto;
+ margin-top: auto;
+position: relative;
+top: 20%;
+}
+
+* {
+    font: calibri;
+}

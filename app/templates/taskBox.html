@@ -1,0 +1,31 @@
+<!--   
+<div>
+        <form>
+            <input ng-model="newText"  type="text"/>
+            <button ng-click="addTask(newText)">Save</button>
+        </form>
+    </div>
+-->
+
+<!--        {{taskBox.data}}-->
+<!--        {{data.tasks}}-->
+<!--        {{data.test2}}-->
+<!--        Space: {{taskbox.data.test}}-->
+
+
+<div class="taskBoxContainer">
+    <div class="taskHeader">
+        <div class="taskHeaderText">
+            Current tasks
+        </div>
+    </div>
+    <div class="taskContainer" ng-repeat="tdata in data.tasks">
+        <div class="taskText">{{tdata.text}}</div>
+    </div>
+    <div class="taskContainer">
+                <div class="taskText">task text2</div>
+    </div>
+        <div class="taskContainer">
+                <div class="taskText">task text3</div>
+    </div>
+</div>
