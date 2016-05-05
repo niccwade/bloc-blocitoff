@@ -1,11 +1,9 @@
-<!--   
 <div>
         <form>
             <input ng-model="newText"  type="text"/>
             <button ng-click="addTask(newText)">Save</button>
         </form>
     </div>
--->
 
 <!--        {{taskBox.data}}-->
 <!--        {{data.tasks}}-->
@@ -20,6 +18,7 @@
         </div>
     </div>
     <div class="taskContainer" ng-repeat="tdata in data.tasks">
+        <input type="checkbox" class="taskCheckbox">
         <div class="taskText">{{tdata.text}}</div>
     </div>
     <div class="taskContainer">
@@ -29,3 +28,14 @@
                 <div class="taskText">task text3</div>
     </div>
 </div>
+
+<!--
+Options:
+Apply a filter for ng-hide, ng-show
+Add another page for expired tasks
+-See if there is metadata (time created)
+-Save date created as data
+-Add data to say active/hidden
+-Put on other Firebase list
+
+-->

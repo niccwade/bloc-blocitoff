@@ -48,13 +48,19 @@ body {
 .taskText{
     height: 50%;
     background-color: inherit;
-    margin-left: 2%;
+    margin-left: 30px;
+    margin-right: 10px;
 margin-bottom: auto;
  margin-top: auto;
 position: relative;
 top: 20%;
 }
 
-* {
-    font: calibri;
+.taskCheckbox {
+    display: inline;
+    height: 20px;
+    background-color: aqua;
+float: left;
+margin: auto;
+    border-radius: 0;
 }

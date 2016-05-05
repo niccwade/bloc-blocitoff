@@ -12,6 +12,8 @@
     
     window.foo = syncObject;
         
+        var currentTime;
+        
         
         syncObject.$loaded(function(){
            if(syncObject.tasks == undefined){
@@ -22,8 +24,13 @@
 
         
     $scope.addTask = function(message){
-            syncObject.tasks.push({text: message})
+            currentTime = getCurrentTime();
+            syncObject.tasks.push({text: message, timeCreated: currentTime.toTimeString(), status: 'active'})
             syncObject.$save()
+    }
+    
+    getCurrentTime = function(){
+        return new Date();
     }
         
     }
