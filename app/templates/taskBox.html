@@ -17,7 +17,7 @@
             Current tasks
         </div>
     </div>
-    <div class="taskContainer" ng-repeat="tdata in data.tasks">
+    <div class="taskContainer" ng-repeat="tdata in data.tasks" ng-hide="tdata.status != 'active' || isTaskExpired(tdata.timeCreated) == true">
         <input type="checkbox" class="taskCheckbox">
         <div class="taskText">{{tdata.text}}</div>
     </div>

@@ -25,14 +25,34 @@
         
     $scope.addTask = function(message){
             currentTime = getCurrentTime();
-            syncObject.tasks.push({text: message, timeCreated: currentTime.toTimeString(), status: 'active'})
+        seeDate(currentTime.toString());
+            syncObject.tasks.push({text: message, timeCreated: currentTime.toString(), status: 'active'})
             syncObject.$save()
+    }
+    
+    $scope.isTaskExpired = function(taskTimeCreationString){
+        var isTaskExpiredValue;
+        var currentDate = getCurrentTime();
+        var sevenDaysAgoDate = currentDate.setDate(currentDate.getDate()-7);
+        var taskTimeCreationDateFormat = new Date(taskTimeCreationString);
+        if(taskTimeCreationDateFormat < sevenDaysAgoDate){
+            isTaskExpiredValue = true;
+        } else{
+            isTaskExpiredValue = false;
+        }
+        return isTaskExpiredValue;
     }
     
     getCurrentTime = function(){
         return new Date();
     }
-        
+    
+    seeDate = function(dateString){
+        var dateTest = new Date(dateString)
+        console.log(dateTest);
+        console.log(dateTest.getDay());
+    }
+    
     }
     angular
     .module('nicoleBlocitoff')
