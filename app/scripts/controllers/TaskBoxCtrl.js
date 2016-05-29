@@ -1,5 +1,6 @@
 (function(){
     function TaskBoxCtrl($firebaseObject, $scope){
+        $scope.query = {}
 //    this.testdata = [{message: "Hello there"}, {message: "Hello there"}, {message: "Hello there"}];
         this.testdata = ["Hellooo", "Hi"];
     var ref = new Firebase("https://shining-fire-4626.firebaseio.com");
@@ -41,6 +42,34 @@
             isTaskExpiredValue = false;
         }
         return isTaskExpiredValue;
+    }
+    
+    
+    $scope.tasksFilter = function(task){
+        var returnValue = false
+        
+        if($scope.query.completed){
+            if(task.status == "complete"){
+                returnValue = true
+            }
+        }       
+         if($scope.query.notCompleted){
+            if(task.status == "notComplete"){
+                returnValue = true
+            }
+        }   
+        if($scope.query.active){
+            if($scope.isTaskExpired(task.timeCreated) == false){
+                returnValue = true
+            }
+        }   
+         if($scope.query.expired){
+            if($scope.isTaskExpired(task.timeCreated) == true){
+                returnValue = true
+            }
+        }   
+    
+        return returnValue
     }
     
     getCurrentTime = function(){

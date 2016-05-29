@@ -18,18 +18,18 @@ body {
     height:90%;
     margin: auto;
         margin-top: 3%;
-
 }
 
 .taskHeader {
     height:10%;
     width: 100%;
     background-color:lightgrey;
+        min-height: 30px;
 }
 
 .taskHeaderText{
     font-size: 120%;
-    width:20%;
+    width:40%;
     height: 50%;
   position: relative;
   top: 50%;
@@ -38,9 +38,22 @@ body {
     text-align: center;
 }
 
+.taskFilters {
+    width: 100%;
+    height: 50px;
+    background-color:darkcyan;
+}
+
+.taskFilter{
+    display: inline-block;
+    color: lightgrey;
+    margin-right: 10px;
+}
+
 .taskContainer{
     height: 10%;
     width: 100%;
+    min-height: 30px;
     background-color: azure;
     border-bottom: thin solid lightgrey;
 }
